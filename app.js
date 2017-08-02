@@ -10,13 +10,20 @@ $(".case").click(function(){
 		//pour alterner les joueurs
 		if(count%2 === 0) {
 
-			$(this).html('<img   src="smile.jpg"/>');
+			$(this).html('<img  class="smile" src="smile.jpg"/>');
 			
 		} else {
-			$(this).html('<img   src="vache.png"/>');
+			$(this).html('<img  class="vache" src="vache.png"/>');
 		}
 	}
 	else {
 		alert("Case occupée, rejoue !");
 	}
+});
+
+//pour recommencer une partie
+$("button").click(function() {
+	$("img").remove();
+	$('.case').removeClass('pleine').addClass('vide');
+
 });
